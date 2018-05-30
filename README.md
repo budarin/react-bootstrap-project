@@ -3,10 +3,9 @@
 Project for fast developing simple react applications and components
 
 Technology stack:
-- webpack dev server
 - react
-- webpack
 - babel
+- webpack dev server
 - HMR
 - flow
 - prettier
