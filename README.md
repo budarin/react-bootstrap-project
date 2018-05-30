@@ -5,7 +5,10 @@ Project for fast developing simple react applications and components
 Technology stack:
 - webpack dev server
 - react
+- webpack
 - babel
+- HMR
+- flow
 - prettier
 - eslint
 - stylelint

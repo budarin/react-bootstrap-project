@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "description": "React simple bootstrap",
     "scripts": {
-        "build": "set NODE_ENV=production && webpack --mode production --config ./config/webpack.config.prod.babel.js",
-        "start": "webpack-dev-server --mode development --config ./config/webpack.config.babel.js",
+        "build": "rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./src/config/webpack.config.prod.babel.js",
+        "start": "webpack-dev-server --mode development --config ./src/config/webpack.config.babel.js",
         "upgrade": "npx flow stop && ncu --upgradeAll && npm install && npx flow",
         "precommit": "lint-staged",
         "test": "echo \"No test specified\" && exit 0"
@@ -65,6 +65,7 @@
     },
     "dependencies": {
         "react": "^16.4.0",
-        "react-dom": "^16.4.0"
+        "react-dom": "^16.4.0",
+        "rimraf": "^2.6.2"
     }
 }
