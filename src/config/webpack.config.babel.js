@@ -28,6 +28,40 @@ const wpConfig = () => {
                     },
                     exclude: path.resolve('node_modules'),
                 },
+                {
+                    test: /\.(svg|png|jpg|gif)$/,
+                    include: path.resolve('./src'),
+                    exclude: path.resolve('node_modules'),
+                    use: {
+                        loader: 'image-size-loader',
+                        options: {
+                            name: 'img/[name].[hash:7].[ext]',
+                            context: path.resolve(__dirname, 'src'),
+                        },
+                    },
+                },
+                {
+                    test: /\.css$/,
+                    use: [
+                        {
+                            loader: 'style-loader/useable',
+                            options: {
+                                hmr: true,
+                            },
+                        },
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                modules: true,
+                                localIdentName: '[name].[local]_[hash:7]',
+                                sourceMap: false,
+                            },
+                        },
+                        {
+                            loader: 'postcss-loader',
+                        },
+                    ],
+                },
             ],
         },
         resolve: {

@@ -1,8 +1,13 @@
 // @flow
 import React from 'react';
+import app from './app.css';
 
 function App() {
-    return <p>Hello World!</p>;
+    const css = app.locals;
+
+    app.use();
+
+    return <p className={css.hello}>Hello World!</p>;
 }
 
 // Demo of working flow

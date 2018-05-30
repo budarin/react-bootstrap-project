@@ -1,12 +1,22 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Administrator">
     <words>
+      <w>attrs</w>
+      <w>autoprefixer</w>
       <w>babelrc</w>
+      <w>browserlist</w>
+      <w>colormin</w>
       <w>devtool</w>
       <w>eslint</w>
       <w>flowtype</w>
+      <w>ident</w>
       <w>lodash</w>
       <w>minify</w>
+      <w>mixins</w>
+      <w>parens</w>
+      <w>postcss</w>
+      <w>useable</w>
+      <w>zindex</w>
     </words>
   </dictionary>
 </component>
