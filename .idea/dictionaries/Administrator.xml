@@ -6,6 +6,7 @@
       <w>babelrc</w>
       <w>browserlist</w>
       <w>colormin</w>
+      <w>cssnano</w>
       <w>devtool</w>
       <w>eslint</w>
       <w>flowtype</w>
