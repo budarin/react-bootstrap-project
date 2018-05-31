@@ -53,6 +53,12 @@
                 "transform-react-jsx-self",
                 "transform-react-jsx-source"
             ]
+        },
+        "test": {
+            "plugins": [
+                "transform-react-jsx-self",
+                "transform-react-jsx-source"
+            ]
         }
     }
 }

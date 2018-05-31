@@ -7,7 +7,8 @@
         "build": "rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./src/config/webpack.config.prod.babel.js",
         "upgrade": "npx flow stop && ncu --upgradeAll && npm install && npx flow",
         "precommit": "lint-staged",
-        "test": "echo \"No test specified\" && exit 0"
+        "test": "set BROWSER=true && jest --notify --detectOpenHandles --no-cache",
+        "test-watch": "set BROWSER=true && set SHOW_BROWSER=true && jest --watch --onlyChanged --notify --detectOpenHandles"
     },
     "lint-staged": {
         "*.{js,json,css,md}": [
@@ -26,9 +27,36 @@
     ],
     "author": "Vadim Budarin",
     "license": "ISC",
+    "jest": {
+        "preset": "jest-puppeteer",
+        "cacheDirectory": "<rootDir>/.tmp/jest",
+        "coverageDirectory": "<rootDir>/.tmp/coverage",
+        "globalSetup": "<rootDir>/src/config/jest/globalSetup.js",
+        "globalTeardown": "<rootDir>/src/config/jest/globalTearDown.js",
+        "testEnvironment": "<rootDir>/src/config/jest/puppeteer_environment.js",
+        "moduleFileExtensions": [
+            "js",
+            "jsx"
+        ],
+        "moduleNameMapper": {
+            "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/config/jest/mocks/fileMock.js",
+            "\\.(css|less)$": "identity-obj-proxy"
+        },
+        "testPathIgnorePatterns": [
+            "/node_modules/"
+        ],
+        "globals": {
+            "__DEV__": true,
+            "__PROD__": false,
+            "__BROWSER__": true,
+            "__SERVER__": false
+        },
+        "notifyMode": "failure"
+    },
     "devDependencies": {
         "babel-core": "^6.26.3",
         "babel-eslint": "^8.2.3",
+        "babel-jest": "^23.0.1",
         "babel-loader": "^7.1.4",
         "babel-minify-webpack-plugin": "^0.3.1",
         "babel-plugin-external-helpers": "^6.22.0",
@@ -58,14 +86,20 @@
         "eslint-plugin-react": "^7.8.2",
         "eslint-plugin-standard": "^3.1.0",
         "flow-bin": "^0.73.0",
+        "identity-obj-proxy": "^3.0.0",
         "image-size-loader": "^0.7.0",
+        "jest": "^23.1.0",
+        "jest-environment-node": "^23.1.0",
+        "jest-puppeteer": "^3.0.1",
         "optimize-js-plugin": "0.0.4",
         "postcss": "^6.0.22",
         "postcss-cssnext": "^3.1.0",
         "postcss-loader": "^2.1.5",
         "postcss-preset-env": "^5.1.0",
         "prettier": "^1.13.0",
+        "puppeteer": "^1.4.0",
         "react-hot-loader": "^4.2.0",
+        "react-test-renderer": "^16.4.0",
         "style-loader": "^0.21.0",
         "stylelint": "^9.2.1",
         "stylelint-config-recommended": "^2.1.0",
