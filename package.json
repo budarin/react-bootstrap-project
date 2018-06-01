@@ -8,7 +8,7 @@
         "upgrade": "npx flow stop && ncu --upgradeAll && npm install && npx flow",
         "precommit": "lint-staged",
         "test": "set BROWSER=true && jest --detectOpenHandles --no-cache",
-        "test-watch": "set BROWSER=true && set SHOW_BROWSER=true && jest --watch --onlyChanged --notify"
+        "test-watch": "set SHOW_BROWSER=true&&jest --watch --onlyChanged --notify"
     },
     "lint-staged": {
         "*.{js,json,css,md}": [
