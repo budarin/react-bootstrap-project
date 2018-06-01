@@ -1,3 +1,4 @@
+import fs from 'fs';
 import path from 'path';
 import webpack from 'webpack';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
@@ -15,8 +16,14 @@ const wpConfig = () => {
             './src/index.js',
         ],
         devServer: {
-            contentBase: path.resolve('./dist'),
             hot: true,
+            port: 443,
+            https: {
+                key: fs.readFileSync('certs/server.key'),
+                cert: fs.readFileSync('certs/server.crt'),
+                ca: fs.readFileSync('certs/cacert.crt'),
+            },
+            contentBase: path.resolve('./dist'),
         },
         module: {
             rules: [

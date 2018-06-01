@@ -5,6 +5,7 @@
       <w>autoprefixer</w>
       <w>babelrc</w>
       <w>browserlist</w>
+      <w>cacert</w>
       <w>colormin</w>
       <w>cssnano</w>
       <w>devtool</w>
