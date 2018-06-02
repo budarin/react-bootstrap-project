@@ -7,8 +7,8 @@
         "build": "rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./src/config/webpack.config.prod.babel.js",
         "upgrade": "npx flow stop && ncu --upgradeAll && npm install && npx flow",
         "precommit": "lint-staged",
-        "test": "set BROWSER=true && jest --detectOpenHandles --no-cache",
-        "test-watch": "set SHOW_BROWSER=true&&jest --watch --onlyChanged --notify"
+        "test-watch": "set SHOW_BROWSER=true&&jest --watch --onlyChanged --notify",
+        "test": "jest --detectOpenHandles --no-cache"
     },
     "lint-staged": {
         "*.{js,json,css,md}": [
@@ -82,7 +82,7 @@
         "eslint": "^4.19.1",
         "eslint-config-prettier": "^2.9.0",
         "eslint-config-standard": "^11.0.0",
-        "eslint-plugin-flowtype": "^2.48.0",
+        "eslint-plugin-flowtype": "^2.49.3",
         "eslint-plugin-import": "^2.12.0",
         "eslint-plugin-node": "^6.0.1",
         "eslint-plugin-prettier": "^2.6.0",
@@ -110,7 +110,7 @@
         "stylelint-no-unsupported-browser-features": "^3.0.0",
         "stylelint-order": "^0.8.1",
         "webpack": "^4.10.2",
-        "webpack-cli": "^2.1.4",
+        "webpack-cli": "^3.0.0",
         "webpack-dev-server": "^3.1.4"
     },
     "dependencies": {
