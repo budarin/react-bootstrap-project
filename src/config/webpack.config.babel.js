@@ -6,9 +6,9 @@ import babelConfig from './babelLoaderConfig.json';
 
 const wpConfig = () => {
     return {
-        mode: 'development',
-        target: 'web',
         cache: true,
+        target: 'web',
+        mode: 'development',
         devtool: 'inline-cheap-module-source-map',
         entry: [
             'react-hot-loader/patch',
@@ -19,9 +19,9 @@ const wpConfig = () => {
             hot: true,
             port: 443,
             https: {
+                ca: fs.readFileSync('certs/cacert.crt'),
                 key: fs.readFileSync('certs/server.key'),
                 cert: fs.readFileSync('certs/server.crt'),
-                ca: fs.readFileSync('certs/cacert.crt'),
             },
             contentBase: path.resolve('./dist'),
         },
@@ -60,8 +60,8 @@ const wpConfig = () => {
                             loader: 'css-loader',
                             options: {
                                 modules: true,
-                                localIdentName: '[name].[local]_[hash:7]',
                                 sourceMap: false,
+                                localIdentName: '[name].[local]_[hash:7]',
                             },
                         },
                         {
@@ -75,13 +75,13 @@ const wpConfig = () => {
             extensions: ['*', '.js', '.jsx'],
         },
         output: {
-            path: path.resolve('./dist'),
             publicPath: '/',
             filename: 'bundle.js',
+            path: path.resolve('./dist'),
         },
         plugins: [
-            new CopyWebpackPlugin([{ from: './src/index.html' }]),
             new webpack.HotModuleReplacementPlugin(),
+            new CopyWebpackPlugin([{ from: './src/index.html' }]),
         ],
     };
 };
