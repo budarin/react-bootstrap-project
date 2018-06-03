@@ -4,13 +4,15 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import MinifyPlugin from 'babel-minify-webpack-plugin';
 import babelConfig from './babelLoaderConfig.json';
 
+babelConfig.plugins.push('external-helpers');
+
 const wpConfig = () => {
     return {
-        mode: 'production',
-        target: 'web',
         cache: false,
-        entry: ['./src/babelHelpers.js', './src/index.js'],
+        target: 'web',
         devtool: 'none',
+        mode: 'production',
+        entry: ['./src/babelHelpers.js', './src/index.js'],
         optimization: {
             minimizer: [
                 new MinifyPlugin(),
@@ -35,9 +37,9 @@ const wpConfig = () => {
                     use: {
                         loader: 'image-size-loader',
                         options: {
-                            name: 'img/[name].[hash].[ext]',
-                            hash: 'sha512',
                             digest: 'hex',
+                            hash: 'sha512',
+                            name: 'img/[name].[hash].[ext]',
                             context: path.resolve(__dirname, 'src'),
                         },
                     },
@@ -49,7 +51,6 @@ const wpConfig = () => {
                             loader: 'style-loader/useable',
                             options: {
                                 hmr: true,
-                                attrs: {},
                             },
                         },
                         {
@@ -58,13 +59,13 @@ const wpConfig = () => {
                                 // This breaks HMR (CSS Modules change name because their hash changes)
                                 modules: true,
                                 // importLoaders: 1,
-                                localIdentName: '[hash:base64]',
+                                localIdentName: '[hash:base64:8]',
                                 // This breaks background-image and other relative paths
                                 // Monitor this: https://github.com/webpack/style-loader/pull/124
                                 // sourceMap: DEV,
-                                sourceMap: false,
-                                import: false,
                                 url: false,
+                                import: false,
+                                sourceMap: false,
                                 // CSSNano Options
                                 minimize: {
                                     // safe: true,

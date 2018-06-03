@@ -4,7 +4,7 @@
     "description": "React simple bootstrap",
     "scripts": {
         "start": "webpack-dev-server --mode development --config ./src/config/webpack.config.babel.js",
-        "build": "rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./src/config/webpack.config.prod.babel.js",
+        "build": "rimraf ./.tmp && rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./src/config/webpack.config.prod.babel.js",
         "upgrade": "npx flow stop && ncu --upgradeAll && npm install && npx flow",
         "precommit": "lint-staged",
         "test-watch": "set SHOW_BROWSER=true&&jest --watch --onlyChanged --notify",
@@ -43,7 +43,7 @@
         ],
         "moduleNameMapper": {
             "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/config/jest/mocks/fileMock.js",
-            "\\.(css|less)$": "identity-obj-proxy"
+            "\\.(css|less)$": "<rootDir>/src/config/jest/mocks/styleMock.js"
         },
         "testPathIgnorePatterns": [
             "/node_modules/"
@@ -110,7 +110,7 @@
         "stylelint-no-unsupported-browser-features": "^3.0.0",
         "stylelint-order": "^0.8.1",
         "webpack": "^4.10.2",
-        "webpack-cli": "^3.0.0",
+        "webpack-cli": "^3.0.1",
         "webpack-dev-server": "^3.1.4"
     },
     "dependencies": {

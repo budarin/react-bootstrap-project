@@ -24,7 +24,6 @@
         "flow"
     ],
     "plugins": [
-        "external-helpers",
         "syntax-dynamic-import",
         "transform-class-properties",
         "syntax-trailing-function-commas",

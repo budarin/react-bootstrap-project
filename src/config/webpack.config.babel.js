@@ -10,21 +10,7 @@ const wpConfig = () => {
         target: 'web',
         mode: 'development',
         devtool: 'inline-cheap-module-source-map',
-        entry: [
-            'react-hot-loader/patch',
-            './src/babelHelpers.js',
-            './src/index.js',
-        ],
-        devServer: {
-            hot: true,
-            port: 443,
-            https: {
-                ca: fs.readFileSync('certs/cacert.crt'),
-                key: fs.readFileSync('certs/server.key'),
-                cert: fs.readFileSync('certs/server.crt'),
-            },
-            contentBase: path.resolve('./dist'),
-        },
+        entry: ['react-hot-loader/patch', './src/index.js'],
         module: {
             rules: [
                 {
@@ -73,6 +59,7 @@ const wpConfig = () => {
         },
         resolve: {
             extensions: ['*', '.js', '.jsx'],
+            modules: ['node_modules', path.resolve('./src')],
         },
         output: {
             publicPath: '/',
@@ -83,6 +70,16 @@ const wpConfig = () => {
             new webpack.HotModuleReplacementPlugin(),
             new CopyWebpackPlugin([{ from: './src/index.html' }]),
         ],
+        devServer: {
+            hot: true,
+            port: 443,
+            https: {
+                ca: fs.readFileSync('certs/cacert.crt'),
+                key: fs.readFileSync('certs/server.key'),
+                cert: fs.readFileSync('certs/server.crt'),
+            },
+            contentBase: path.resolve('./dist'),
+        },
     };
 };
 
