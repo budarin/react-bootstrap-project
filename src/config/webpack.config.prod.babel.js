@@ -49,29 +49,16 @@ const wpConfig = () => {
                     use: [
                         {
                             loader: 'style-loader/useable',
-                            options: {
-                                hmr: true,
-                            },
                         },
                         {
                             loader: 'css-loader',
                             options: {
-                                // This breaks HMR (CSS Modules change name because their hash changes)
                                 modules: true,
-                                // importLoaders: 1,
                                 localIdentName: '[hash:base64:8]',
-                                // This breaks background-image and other relative paths
-                                // Monitor this: https://github.com/webpack/style-loader/pull/124
-                                // sourceMap: DEV,
-                                url: false,
-                                import: false,
                                 sourceMap: false,
-                                // CSSNano Options
                                 minimize: {
                                     // safe: true,
-                                    calc: false,
                                     zindex: false,
-                                    colormin: false,
                                     discardComments: { removeAll: true },
                                 },
                             },
