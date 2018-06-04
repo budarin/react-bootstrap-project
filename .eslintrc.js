@@ -23,6 +23,10 @@ module.exports = {
         jest: true,
         jasmine: true,
         serviceworker: true,
+        'jest/globals': true,
+    },
+    settings: {
+        'import/ignore': ['node_modules'],
     },
     globals: {},
     rules: {
