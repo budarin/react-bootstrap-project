@@ -9,6 +9,7 @@
       <w>colormin</w>
       <w>cssnano</w>
       <w>devtool</w>
+      <w>ecma</w>
       <w>eslint</w>
       <w>flowtype</w>
       <w>ident</w>
@@ -17,7 +18,9 @@
       <w>mixins</w>
       <w>parens</w>
       <w>postcss</w>
+      <w>serviceworker</w>
       <w>teardown</w>
+      <w>unmount</w>
       <w>useable</w>
       <w>zindex</w>
     </words>
