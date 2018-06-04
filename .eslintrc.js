@@ -13,8 +13,9 @@ module.exports = {
         'plugin:react/recommended',
         'plugin:flowtype/recommended',
         'plugin:jsx-a11y/recommended',
+        'plugin:jest/recommended',
     ],
-    plugins: ['react', 'flowtype', 'import', 'jsx-a11y', 'prettier'],
+    plugins: ['prettier', 'react', 'flowtype', 'import', 'jsx-a11y', 'jest'],
     env: {
         es6: true,
         browser: true,
