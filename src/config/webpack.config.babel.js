@@ -11,6 +11,11 @@ const wpConfig = () => {
         mode: 'development',
         devtool: 'inline-cheap-module-source-map',
         entry: ['react-hot-loader/patch', './src/index.js'],
+        output: {
+            publicPath: '/',
+            filename: 'bundle.js',
+            path: path.resolve('./dist'),
+        },
         module: {
             rules: [
                 {
@@ -61,15 +66,7 @@ const wpConfig = () => {
             extensions: ['*', '.js', '.jsx'],
             modules: ['node_modules', path.resolve('./src')],
         },
-        output: {
-            publicPath: '/',
-            filename: 'bundle.js',
-            path: path.resolve('./dist'),
-        },
-        plugins: [
-            new webpack.HotModuleReplacementPlugin(),
-            new CopyWebpackPlugin([{ from: './src/index.html' }]),
-        ],
+        plugins: [new webpack.HotModuleReplacementPlugin(), new CopyWebpackPlugin([{ from: './src/index.html' }])],
         devServer: {
             hot: true,
             port: 443,

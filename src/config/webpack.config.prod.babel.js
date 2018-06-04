@@ -13,12 +13,10 @@ const wpConfig = () => {
         devtool: 'none',
         mode: 'production',
         entry: ['./src/babelHelpers.js', './src/index.js'],
-        optimization: {
-            minimizer: [
-                new MinifyPlugin(),
-                new OptimizeJsPlugin({ sourceMap: false }),
-            ],
-            occurrenceOrder: true,
+        output: {
+            path: path.resolve('./dist'),
+            publicPath: '/',
+            filename: 'bundle.js',
         },
         module: {
             rules: [
@@ -72,11 +70,11 @@ const wpConfig = () => {
         },
         resolve: {
             extensions: ['*', '.js', '.jsx'],
+            modules: ['node_modules', path.resolve('./src')],
         },
-        output: {
-            path: path.resolve('./dist'),
-            publicPath: '/',
-            filename: 'bundle.js',
+        optimization: {
+            occurrenceOrder: true,
+            minimizer: [new MinifyPlugin(), new OptimizeJsPlugin({ sourceMap: false })],
         },
         plugins: [new CopyWebpackPlugin([{ from: './src/index.html' }])],
     };
