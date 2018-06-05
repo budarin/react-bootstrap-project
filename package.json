@@ -7,7 +7,7 @@
         "build": "rimraf ./.tmp && rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./src/config/webpack.config.prod.babel.js",
         "upgrade": "npx flow stop && ncu --upgradeAll && npm install && npx flow",
         "precommit": "lint-staged",
-        "test-watch": "set SHOW_BROWSER=true&&jest --watch --onlyChanged --notify",
+        "test-watch": "set SHOW_BROWSER=true&&jest --watch --onlyChanged --watchman",
         "test": "jest --detectOpenHandles --no-cache"
     },
     "lint-staged": {
