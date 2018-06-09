@@ -1,3 +1,5 @@
+/* eslint-disable import/no-commonjs */
+/* eslint-disable import/unambiguous */
 const NodeEnvironment = require('jest-environment-node');
 const puppeteer = require('puppeteer');
 const fs = require('fs');

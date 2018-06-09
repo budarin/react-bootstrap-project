@@ -1,3 +1,5 @@
+/* eslint-disable import/unambiguous */
+
 let page;
 const timeout = 10000;
 

@@ -1,5 +1,4 @@
 // @flow
-
 type CSSModule =
     | {
           use: Function,

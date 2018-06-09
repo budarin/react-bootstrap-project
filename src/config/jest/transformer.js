@@ -1,3 +1,5 @@
+/* eslint-disable import/no-commonjs */
+/* eslint-disable import/unambiguous */
 const babelConfig = require('../babelLoaderConfig.json');
 
 // env preset should produce commonjs for jest
