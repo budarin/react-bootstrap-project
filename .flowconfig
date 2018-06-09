@@ -1,8 +1,9 @@
 [ignore]
-./dist/.*
-./.idea/.*
-./.git/.*
-./.tmp/.*
+.*/dist/.*
+.*/.idea/.*
+.*/.git/.*
+.*/.tmp/.*
+.*/node_modules/.*
 
 [include]
 
