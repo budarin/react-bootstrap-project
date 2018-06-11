@@ -33,12 +33,12 @@ const config = {
 };
 
 // run also puppeteer tests
-if (RUN_PUPPETEER_TESTS) {
+if (RUN_PUPPETEER_TESTS && RUN_PUPPETEER_TESTS.trim() === 'true') {
     config.testMatch.push('**/?(*.)+(test).pptr.js?(x)');
 }
 
 // run only puppeteer tests
-if (RUN_ONLY_PUPPETEER_TESTS) {
+if (RUN_ONLY_PUPPETEER_TESTS && RUN_ONLY_PUPPETEER_TESTS.trim() === 'true') {
     config.testMatch = ['**/?(*.)+(test).pptr.js?(x)'];
 }
 

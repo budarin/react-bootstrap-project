@@ -2,7 +2,8 @@ import path from 'path';
 import OptimizeJsPlugin from 'optimize-js-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import MinifyPlugin from 'babel-minify-webpack-plugin';
-import babelConfig from './babelLoaderConfig.json';
+
+import babelConfig from './babelLoaderConfig';
 
 babelConfig.plugins.push('external-helpers');
 
