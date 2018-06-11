@@ -9,7 +9,8 @@
         "build": "rimraf ./.tmp && rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./src/config/webpack.config.prod.babel.js",
         "test-puppeteer": "set SHOW_BROWSER=true && set RUN_ONLY_PUPPETEER_TESTS=true&&jest --detectOpenHandles --no-cache  --forceExit ",
         "upgrade": "npx flow stop && ncu --upgradeAll && npm install && npx flow",
-        "precommit": "lint-staged"
+        "precommit": "lint-staged",
+        "postinstall": "npm audit fix"
     },
     "lint-staged": {
         "*.{js,json,css,md}": [
