@@ -4,9 +4,9 @@
     "description": "React simple bootstrap",
     "scripts": {
         "start": "webpack-dev-server --mode development --config ./src/config/webpack.config.babel.js",
-        "build": "rimraf ./.tmp && rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./src/config/webpack.config.prod.babel.js",
         "test-watch": "set SHOW_BROWSER=true && set RUN_PUPPETEER_TESTS=true&&jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify",
         "test": "jest --detectOpenHandles --no-cache --forceExit",
+        "build": "rimraf ./.tmp && rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./src/config/webpack.config.prod.babel.js",
         "test-puppeteer": "set SHOW_BROWSER=true && set RUN_ONLY_PUPPETEER_TESTS=true&&jest --detectOpenHandles --no-cache  --forceExit ",
         "upgrade": "npx flow stop && ncu --upgradeAll && npm install && npx flow",
         "precommit": "lint-staged"
