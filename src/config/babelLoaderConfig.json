@@ -1,6 +1,6 @@
 {
     "babelrc": false,
-    "cacheDirectory": "/.tmp",
+    "cacheDirectory": ".tmp",
     "presets": [
         [
             "env",
