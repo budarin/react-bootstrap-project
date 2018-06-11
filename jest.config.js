@@ -1,6 +1,11 @@
-module.exports = {
-    preset: 'jest-puppeteer',
+/* eslint-disable import/no-commonjs */
+/* eslint-disable import/unambiguous */
+const RUN_PUPPETEER_TESTS = process.env.RUN_PUPPETEER_TESTS;
+const RUN_ONLY_PUPPETEER_TESTS = process.env.RUN_ONLY_PUPPETEER_TESTS;
+
+const config = {
     rootDir: 'src',
+    preset: 'jest-puppeteer',
     cacheDirectory: '../.tmp/jest',
     coverageDirectory: '../.tmp/coverage',
     globalSetup: '<rootDir>/config/jest/globalSetup.js',
@@ -9,6 +14,7 @@ module.exports = {
     transform: {
         '^.+\\.js$': '<rootDir>/config/jest/transformer.js',
     },
+    testMatch: ['**/__tests__/**/*.js?(x)', '**/?(*.)+(spec|test).js?(x)'],
     moduleFileExtensions: ['js', 'jsx'],
     moduleNameMapper: {
         '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
@@ -22,5 +28,18 @@ module.exports = {
         __BROWSER__: true,
         __SERVER__: false,
     },
+    notify: false,
     notifyMode: 'failure',
 };
+
+// run also puppeteer tests
+if (RUN_PUPPETEER_TESTS) {
+    config.testMatch.push('**/?(*.)+(test).pptr.js?(x)');
+}
+
+// run only puppeteer tests
+if (RUN_ONLY_PUPPETEER_TESTS) {
+    config.testMatch = ['**/?(*.)+(test).pptr.js?(x)'];
+}
+
+module.exports = config;

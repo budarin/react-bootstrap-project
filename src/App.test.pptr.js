@@ -1,13 +1,13 @@
 /* eslint-disable import/unambiguous */
-
 let page;
-const timeout = 10000;
+
+jest.setTimeout(10000);
 
 beforeAll(async () => {
     page = await global.browser.newPage();
 
     await page.goto('https://localhost/');
-}, timeout);
+});
 
 afterAll(async () => {
     await page.close();
