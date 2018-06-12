@@ -1,8 +1,6 @@
 /* eslint-disable import/unambiguous */
 let page;
 
-jest.setTimeout(10000);
-
 beforeAll(async () => {
     page = await global.browser.newPage();
 
