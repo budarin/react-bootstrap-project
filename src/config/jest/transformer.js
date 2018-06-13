@@ -4,13 +4,12 @@ const browserList = require('../browserList');
 
 const config = {
     babelrc: false,
-    cacheDirectory: '.tmp/client',
     presets: [
         [
             'env',
             {
                 loose: true,
-                debug: false,
+                debug: true,
                 modules: 'commonjs',
                 useBuiltIns: true,
                 targets: {

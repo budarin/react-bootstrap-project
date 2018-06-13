@@ -1,16 +1,10 @@
 /* eslint-disable import/no-commonjs */
 /* eslint-disable import/unambiguous */
-const RUN_PUPPETEER_TESTS = process.env.RUN_PUPPETEER_TESTS;
-const RUN_ONLY_PUPPETEER_TESTS = process.env.RUN_ONLY_PUPPETEER_TESTS;
-
 const config = {
     rootDir: 'src',
     preset: 'jest-puppeteer',
     cacheDirectory: '../.tmp/jest',
     coverageDirectory: '../.tmp/coverage',
-    globalSetup: '<rootDir>/config/jest/globalSetup.js',
-    globalTeardown: '<rootDir>/config/jest/globalTearDown.js',
-    testEnvironment: '<rootDir>/config/jest/puppeteer_environment.js',
     transform: {
         '^.+\\.js$': '<rootDir>/config/jest/transformer.js',
     },
@@ -31,15 +25,5 @@ const config = {
     notify: false,
     notifyMode: 'failure',
 };
-
-// run also puppeteer tests
-if (RUN_PUPPETEER_TESTS && RUN_PUPPETEER_TESTS.trim() === 'true') {
-    config.testMatch.push('**/?(*.)+(test).pptr.js?(x)');
-}
-
-// run only puppeteer tests
-if (RUN_ONLY_PUPPETEER_TESTS && RUN_ONLY_PUPPETEER_TESTS.trim() === 'true') {
-    config.testMatch = ['**/?(*.)+(test).pptr.js?(x)'];
-}
 
 module.exports = config;

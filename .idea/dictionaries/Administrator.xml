@@ -18,6 +18,7 @@
       <w>mixins</w>
       <w>parens</w>
       <w>postcss</w>
+      <w>pptr</w>
       <w>serviceworker</w>
       <w>teardown</w>
       <w>unmount</w>
