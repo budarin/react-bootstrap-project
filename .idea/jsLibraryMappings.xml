@@ -2,6 +2,7 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="PROJECT" libraries="{@types/jest, @types/react, @types/react-dom, @types/react-test-renderer, @types/webpack}" />
+    <includedPredefinedLibrary name="HTTP Response Handler" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>
