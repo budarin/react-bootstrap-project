@@ -16,12 +16,7 @@ const config = {
         '\\.(css)$': '<rootDir>/config/jest/mocks/styleMock.js',
     },
     testPathIgnorePatterns: ['/node_modules/'],
-    globals: {
-        __DEV__: true,
-        __PROD__: false,
-        __BROWSER__: true,
-        __SERVER__: false,
-    },
+    globals: {},
     notify: false,
     notifyMode: 'failure',
 };
