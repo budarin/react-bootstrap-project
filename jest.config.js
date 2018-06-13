@@ -4,7 +4,7 @@ const config = {
     rootDir: 'src',
     preset: 'jest-puppeteer',
     cacheDirectory: '../.tmp/jest',
-    coverageDirectory: '../.tmp/coverage',
+    coverageDirectory: '../.tmp/jest/coverage',
     transform: {
         '^.+\\.js$': '<rootDir>/config/jest/transformer.js',
     },
