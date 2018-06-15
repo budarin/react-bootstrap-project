@@ -2,6 +2,7 @@ import puppeteer from 'puppeteer';
 
 const width = 1024;
 const height = 768;
+
 const launchProps = {
     headless: false,
     slowMo: 80,
@@ -10,6 +11,8 @@ const launchProps = {
 
 let page;
 let browser;
+
+jest.setTimeout(10000);
 
 beforeAll(async () => {
     browser = await puppeteer.launch(launchProps);
