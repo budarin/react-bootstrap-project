@@ -16,8 +16,10 @@ jest.setTimeout(10000);
 
 beforeAll(async () => {
     browser = await puppeteer.launch(launchProps);
-    page = await browser.newPage();
 
+    const context = await browser.createIncognitoBrowserContext();
+
+    page = await context.newPage();
     await page.goto('https://google.com/');
 });
 
