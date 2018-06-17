@@ -20,5 +20,8 @@
     "less.validate": false,
     "scss.validate": false,
     "window.zoomLevel": 0,
-    "git.autofetch": true
+    "git.autofetch": true,
+
+    // npm sripts
+    "npm.enableScriptExplorer": true
 }
