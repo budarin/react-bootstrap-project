@@ -19,7 +19,7 @@
       <file leaf-file-name="jest.config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jest.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="72">
               <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
             </state>
           </provider>
@@ -43,11 +43,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
               <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.vscode/settings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -195,6 +204,11 @@
             <path>
               <item name="react-bootstrap-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-bootstrap-project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-bootstrap-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-bootstrap-project" type="462c0819:PsiDirectoryNode" />
+              <item name=".vscode" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-bootstrap-project" type="b2602c69:ProjectViewProjectNode" />
@@ -406,6 +420,7 @@
       <workItem from="1529239717959" duration="3000" />
       <workItem from="1529243629375" duration="552000" />
       <workItem from="1529257559657" duration="51000" />
+      <workItem from="1529257721117" duration="13000" />
     </task>
     <task id="LOCAL-00024" summary="upgrade packages">
       <created>1528116254011</created>
@@ -786,18 +801,19 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86814000" />
+    <option name="totallyTimeSpent" value="86827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-834" width="1456" height="2576" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.70259637" visible="true" weight="0.2496474" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7017405" visible="true" weight="0.2496474" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2502092" />
-      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.31129706" />
-      <window_info id="npm" order="2" sideWeight="0.29740363" side_tool="true" visible="true" weight="0.2496474" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.31422594" />
+      <window_info id="npm" order="2" sideWeight="0.2982595" side_tool="true" visible="true" weight="0.2496474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="top" id="Terminal" order="0" visible="true" weight="0.15690376" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -1157,7 +1173,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jest.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="72">
           <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
         </state>
       </provider>
@@ -1183,17 +1199,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.vscode/settings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.vscode/settings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

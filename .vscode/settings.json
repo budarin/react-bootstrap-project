@@ -13,9 +13,7 @@
     },
 
     //eslint
-    "eslint.workingDirectories": [
-        "./src"
-    ],
+    "eslint.workingDirectories": ["./src"],
 
     // stylelint
     "css.validate": false,
