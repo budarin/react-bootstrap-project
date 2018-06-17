@@ -12,7 +12,7 @@ function App() {
 
 // Demo of working flow
 function a(b: string): number {
-    return b;
+    return b + '';
 }
 
 a('Hello');
