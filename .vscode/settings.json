@@ -1,6 +1,5 @@
 {
     "javascript.validate.enable": false,
-    "flow.pathToFlow": "D:\\Projects\\react-bootstrap-project\\node_modules\\flow-bin\\flow-win64-v0.74.0\\flow.exe",
 
     // prettier
     "editor.formatOnSave": false,

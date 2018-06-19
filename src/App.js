@@ -2,8 +2,12 @@
 import React from 'react';
 import app from './app.css';
 
+type CSS = {
+    +hello: string,
+};
+
 function App() {
-    const css = app.locals;
+    const css: CSS = app.locals;
 
     app.use();
 
@@ -12,7 +16,7 @@ function App() {
 
 // Demo of working flow
 function a(b: string): number {
-    return b.bold();
+    return b.length;
 }
 
 a('Hello');
