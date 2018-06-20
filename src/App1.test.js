@@ -3,7 +3,6 @@ import puppeteer from 'puppeteer';
 describe('Home', () => {
     const width = 1024;
     const height = 768;
-
     const launchProps = {
         headless: false,
         slowMo: 80,
