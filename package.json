@@ -9,7 +9,6 @@
         "build": "rimraf ./.tmp && rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./config/webpack.config.prod.babel.js",
         "upgrade": "ncu --upgradeAll && npm install",
         "precommit": "lint-staged",
-        "postinstall": ""
     },
     "lint-staged": {
         "*.{js,json,css,md}": [
