@@ -1,6 +1,4 @@
 {
-    "javascript.validate.enable": false,
-
     // prettier
     "editor.formatOnSave": false,
     "[javascript]": {
