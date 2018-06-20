@@ -7,7 +7,7 @@ Technology stack:
 - babel
 - webpack dev server
 - HMR
-- flow
+- flow (removed)
 - prettier
 - eslint
 - stylelint (css-next, postcss-preset-env, cssnano)

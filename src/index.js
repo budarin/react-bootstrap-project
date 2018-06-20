@@ -1,4 +1,3 @@
-// @flow
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -13,7 +12,6 @@ function renderApp() {
 renderApp();
 
 if (process.env.NODE_ENV === 'development') {
-    // $FlowIgnore
     module.hot.accept('./App', () => {
         renderApp();
     });
