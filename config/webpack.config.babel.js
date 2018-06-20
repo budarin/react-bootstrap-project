@@ -70,7 +70,7 @@ const wpConfig = () => {
         plugins: [new webpack.HotModuleReplacementPlugin(), new CopyWebpackPlugin([{ from: './src/index.html' }])],
         devServer: {
             hot: true,
-            port: 443,
+            port: 4430,
             https: {
                 ca: fs.readFileSync('certs/cacert.crt'),
                 key: fs.readFileSync('certs/server.key'),
