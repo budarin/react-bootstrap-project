@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "description": "React simple bootstrap",
     "scripts": {
-        "start": "webpack-dev-server --mode development --config ./src/config/webpack.config.babel.js",
+        "start": "webpack-dev-server --mode development --config ./config/webpack.config.babel.js",
         "test-watch": "jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify",
         "test": "jest --detectOpenHandles --no-cache --forceExit",
-        "build": "rimraf ./.tmp && rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./src/config/webpack.config.prod.babel.js",
+        "build": "rimraf ./.tmp && rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./config/webpack.config.prod.babel.js",
         "upgrade": "ncu --upgradeAll && npm install",
         "precommit": "lint-staged",
         "postinstall": ""

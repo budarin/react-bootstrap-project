@@ -1,4 +1,4 @@
-const browserlist = require('./src/config/browserList');
+const browserlist = require('./configsrc/config/browserList');
 
 module.exports = {
     COMMENT:

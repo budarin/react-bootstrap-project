@@ -6,14 +6,14 @@ const config = {
     cacheDirectory: '../.tmp/jest',
     coverageDirectory: '../.tmp/jest/coverage',
     transform: {
-        '^.+\\.js$': '<rootDir>/config/jest/transformer.js',
+        '^.+\\.js$': '../config/jest/transformer.js',
     },
     testMatch: ['**/__tests__/**/*.js?(x)', '**/?(*.)+(spec|test).js?(x)'],
     moduleFileExtensions: ['js', 'jsx'],
     moduleNameMapper: {
         '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-            '<rootDir>/config/jest/mocks/fileMock.js',
-        '\\.(css)$': '<rootDir>/config/jest/mocks/styleMock.js',
+            '../config/jest/mocks/fileMock.js',
+        '\\.(css)$': '../config/jest/mocks/styleMock.js',
     },
     testPathIgnorePatterns: ['/node_modules/'],
     globals: {},
