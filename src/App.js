@@ -1,4 +1,3 @@
-// @flow
 import React from 'react';
 import app from './app.css';
 
@@ -9,7 +8,6 @@ function App() {
     return <p className={css.hello}>Hello World!</p>;
 }
 
-// Demo of working flow
 function a(b) {
     return b.length;
 }
