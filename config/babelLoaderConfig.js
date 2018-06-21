@@ -9,6 +9,7 @@ module.exports = {
             {
                 loose: true,
                 debug: true,
+                modules: false, // to properly work HMR
                 targets: {
                     browsers: browserList,
                 },
