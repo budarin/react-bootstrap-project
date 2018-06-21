@@ -6,13 +6,17 @@ import App from './App';
 function renderApp() {
     const app = document.getElementById('app');
 
-    app && ReactDOM.render(<App />, app);
+    if (app) {
+        ReactDOM.render(<App />, app);
+    }
 }
 
 renderApp();
 
 if (process.env.NODE_ENV === 'development') {
-    module.hot && module.hot.accept('./App', () => {
-        renderApp();
-    });
+    if (module.hot) {
+        module.hot.accept('./App', () => {
+            renderApp();
+        });
+    }
 }

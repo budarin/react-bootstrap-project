@@ -1,9 +1,6 @@
 {
     // prettier
-    "editor.formatOnSave": false,
-    "[javascript]": {
-        "editor.formatOnSave": true
-    },
+    "editor.formatOnSave": true,
     "json.format.enable": true,
     "[json]": {
         "editor.formatOnSave": true

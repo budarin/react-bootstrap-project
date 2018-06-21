@@ -8,7 +8,7 @@ function App() {
     return <p className={'hello'}>Hello World!</p>;
 }
 
-function a(b: string):string {
+function a(b: string): string {
     return b;
 }
 
