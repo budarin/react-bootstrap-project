@@ -22,7 +22,7 @@ const wpConfig = () => {
         module: {
             rules: [
                 {
-                    test: /\.((t|j)s(x)$/,
+                    test: /\.(ts|tsx|js|jsx)$/,
                     use: {
                         loader: 'babel-loader',
                         options: babelConfig,
