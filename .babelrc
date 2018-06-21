@@ -1,12 +1,21 @@
 {
-    "presets": [["env", { "loose": true }]],
-    "plugins": [
-        "syntax-trailing-function-commas",
-        "syntax-dynamic-import",
+    "presets": [
         [
-            "transform-object-rest-spread",
+            "@babel/preset-env",
             {
-                "useBuiltIns": true
+                "debug": true,
+                "loose": true,
+                "modules": false,
+                "useBuiltIns": false
+            }
+        ]
+    ],
+    "plugins": [
+        "@babel/plugin-syntax-dynamic-import",
+        [
+            "@babel/plugin-proposal-object-rest-spread",
+            {
+                "useBuiltIns": false
             }
         ]
     ]
