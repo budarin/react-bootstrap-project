@@ -14,8 +14,8 @@ const config = {
                 },
             },
         ],
-        '@babel/preset-react',
         '@babel/preset-typescript',
+        '@babel/preset-react',
     ],
     plugins: [
         '@babel/plugin-syntax-dynamic-import',
