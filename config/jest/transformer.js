@@ -17,6 +17,7 @@ const config = {
                 },
             },
         ],
+        'typescript',
         'react',
     ],
     plugins: [

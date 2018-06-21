@@ -4,9 +4,10 @@
     "description": "React simple bootstrap",
     "scripts": {
         "start": "webpack-dev-server --mode development --config ./config/webpack.config.babel.js",
+        "type-check": "npx tsc --noEmit",
         "test-watch": "jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify",
         "test": "jest --detectOpenHandles --no-cache --forceExit",
-        "build": "rimraf ./.tmp && rimraf ./dist && set NODE_ENV=production && webpack --mode production --config ./config/webpack.config.prod.babel.js",
+        "build": "rimraf ./.tmp && rimraf ./dist && npx tsc --emitDeclarationOnly && set NODE_ENV=production && webpack --mode production --config ./config/webpack.config.prod.babel.js",
         "upgrade": "ncu --upgradeAll && npm install",
         "precommit": "lint-staged"
     },
@@ -29,6 +30,10 @@
     "author": "Vadim Budarin",
     "license": "ISC",
     "devDependencies": {
+        "@types/node": "^10.3.4",
+        "@types/react": "^16.4.1",
+        "@types/react-dom": "^16.0.6",
+        "@types/webpack-env": "^1.13.6",
         "babel-core": "^6.26.3",
         "babel-jest": "^23.0.1",
         "babel-loader": "^7.1.4",
@@ -45,6 +50,7 @@
         "babel-plugin-transform-react-jsx-source": "^6.22.0",
         "babel-preset-env": "^1.7.0",
         "babel-preset-react": "^6.24.1",
+        "babel-preset-typescript": "^7.0.0-alpha.19",
         "copy-webpack-plugin": "^4.5.1",
         "css-loader": "^0.28.11",
         "enzyme": "^3.3.0",
@@ -65,6 +71,7 @@
         "stylelint-config-recommended": "^2.1.0",
         "stylelint-no-unsupported-browser-features": "^3.0.0",
         "stylelint-order": "^0.8.1",
+        "typescript": "^2.9.2",
         "webpack": "^4.12.0",
         "webpack-cli": "^3.0.8",
         "webpack-dev-server": "^3.1.4"

@@ -1,5 +1,17 @@
 {
-    "presets": [["env", { "loose": true }]],
+    "presets": [
+        [
+            "env",
+            {
+                "loose": true,
+                "modules": false,
+                "useBuiltIns": false,
+                "debug": true,
+                "targets": { "node": "current" }
+            }
+        ],
+        "typescript"
+    ],
     "plugins": [
         "syntax-trailing-function-commas",
         "syntax-dynamic-import",

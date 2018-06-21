@@ -11,13 +11,14 @@ module.exports = {
             {
                 loose: true,
                 modules: false,
-                useBuiltIns: true,
+                useBuiltIns: false,
                 debug: true,
                 targets: {
                     browsers: browserList,
                 },
             },
         ],
+        'typescript',
         'react',
     ],
     plugins: [

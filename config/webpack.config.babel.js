@@ -20,7 +20,7 @@ const wpConfig = () => {
         module: {
             rules: [
                 {
-                    test: /\.(js|jsx)$/,
+                    test: /\.(ts|tsx|js|jsx)$/,
                     use: {
                         loader: 'babel-loader',
                         options: babelConfig,
@@ -64,7 +64,7 @@ const wpConfig = () => {
             ],
         },
         resolve: {
-            extensions: ['*', '.js', '.jsx'],
+            extensions: ['.ts', '.tsx', '.js', '.json'],
             modules: ['node_modules', path.resolve('./src')],
         },
         plugins: [new webpack.HotModuleReplacementPlugin(), new CopyWebpackPlugin([{ from: './src/index.html' }])],

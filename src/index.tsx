@@ -12,7 +12,7 @@ function renderApp() {
 renderApp();
 
 if (process.env.NODE_ENV === 'development') {
-    module.hot.accept('./App', () => {
+    module.hot && module.hot.accept('./App', () => {
         renderApp();
     });
 }
