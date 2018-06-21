@@ -9,7 +9,7 @@ function App() {
 }
 
 function a(b) {
-    return b.length;
+    return b.indexOf('b');
 }
 
 a('Hello');
