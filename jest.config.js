@@ -1,5 +1,3 @@
-/* eslint-disable import/no-commonjs */
-/* eslint-disable import/unambiguous */
 const config = {
     rootDir: 'src',
     preset: 'jest-puppeteer',

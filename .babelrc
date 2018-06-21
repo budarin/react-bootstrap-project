@@ -4,22 +4,11 @@
             "env",
             {
                 "loose": true,
-                "modules": false,
-                "useBuiltIns": false,
                 "debug": true,
                 "targets": { "node": "current" }
             }
         ],
         "typescript"
     ],
-    "plugins": [
-        "syntax-trailing-function-commas",
-        "syntax-dynamic-import",
-        [
-            "transform-object-rest-spread",
-            {
-                "useBuiltIns": true
-            }
-        ]
-    ]
+    "plugins": ["syntax-trailing-function-commas", "syntax-dynamic-import", "transform-object-rest-spread"]
 }

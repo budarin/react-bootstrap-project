@@ -1,5 +1,3 @@
-/* eslint-disable import/no-commonjs */
-/* eslint-disable import/unambiguous */
 const browserList = require('../browserList');
 
 const config = {
@@ -10,8 +8,6 @@ const config = {
             {
                 loose: true,
                 debug: true,
-                modules: 'commonjs',
-                useBuiltIns: true,
                 targets: {
                     browsers: browserList,
                 },
@@ -25,9 +21,9 @@ const config = {
         'transform-react-jsx-self',
         'transform-react-jsx-source',
         'transform-class-properties',
+        'transform-object-rest-spread',
         'syntax-trailing-function-commas',
         ['lodash', { id: ['lodash', 'recompose'] }],
-        ['transform-object-rest-spread', { useBuiltIns: true }],
     ],
 };
 

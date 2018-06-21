@@ -4,9 +4,10 @@
     "description": "React simple bootstrap",
     "scripts": {
         "start": "webpack-dev-server --mode development --config ./config/webpack.config.babel.js",
-        "type-check": "npx tsc --noEmit",
+        "type-check": "npx tsc",
         "test-watch": "jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify",
         "test": "jest --detectOpenHandles --no-cache --forceExit",
+        "coverage": "jest --coverage",
         "build": "rimraf ./.tmp && rimraf ./dist && npx tsc --emitDeclarationOnly && set NODE_ENV=production && webpack --mode production --config ./config/webpack.config.prod.babel.js",
         "upgrade": "ncu --upgradeAll && npm install",
         "precommit": "lint-staged"

@@ -1,5 +1,3 @@
-/* eslint-disable import/no-commonjs */
-/* eslint-disable import/unambiguous */
 const browserList = require('./browserList');
 
 module.exports = {
@@ -10,33 +8,21 @@ module.exports = {
             'env',
             {
                 loose: true,
-                modules: false,
-                useBuiltIns: false,
                 debug: true,
                 targets: {
                     browsers: browserList,
                 },
             },
         ],
-        'typescript',
         'react',
+        'typescript',
     ],
     plugins: [
         'syntax-dynamic-import',
         'transform-class-properties',
+        'transform-object-rest-spread',
         'syntax-trailing-function-commas',
-        [
-            'transform-object-rest-spread',
-            {
-                useBuiltIns: true,
-            },
-        ],
-        [
-            'lodash',
-            {
-                id: ['lodash', 'recompose'],
-            },
-        ],
+        ['lodash', { id: ['lodash', 'recompose'] }],
     ],
     env: {
         production: {
