@@ -7,31 +7,31 @@ module.exports = {
     cacheDirectory: '.tmp',
     presets: [
         [
-            '@babel/plugin-env',
+            'env',
             {
-                debug: true,
                 loose: true,
                 modules: false,
-                useBuiltIns: false,
-                shippedProposals: true,
+                useBuiltIns: true,
+                debug: true,
                 targets: {
                     browsers: browserList,
                 },
             },
         ],
-        '@babel/plugin-react',
+        'react',
     ],
     plugins: [
-        '@babel/plugin-syntax-dynamic-import',
-        '@babel/plugin-proposal-class-properties',
+        'syntax-dynamic-import',
+        'transform-class-properties',
+        'syntax-trailing-function-commas',
         [
-            '@babel/plugin-proposal-object-rest-spread',
+            'transform-object-rest-spread',
             {
                 useBuiltIns: true,
             },
         ],
         [
-            '@babel/plugin-lodash',
+            'lodash',
             {
                 id: ['lodash', 'recompose'],
             },
@@ -39,14 +39,11 @@ module.exports = {
     ],
     env: {
         production: {
-            plugins: [
-                '@babel/plugin-transform-react-inline-elements',
-                '@babel/plugin-transform-react-constant-elements',
-            ],
+            plugins: ['transform-react-inline-elements', 'transform-react-constant-elements'],
             ignore: ['__snapshots__', '__tests__', 'node_modules'],
         },
         development: {
-            plugins: ['@babel/plugin-transform-react-jsx-self', '@babel/plugin-transform-react-jsx-source'],
+            plugins: ['transform-react-jsx-self', 'transform-react-jsx-source'],
             ignore: ['__snapshots__', '__tests__', 'node_modules'],
         },
     },

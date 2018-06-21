@@ -2,3 +2,5 @@
 /.tmp/
 /node-modules/
 /package-lock.json
+# /.eslintrc*
+/.babelrc
