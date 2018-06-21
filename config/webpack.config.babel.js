@@ -11,7 +11,7 @@ const wpConfig = () => {
         target: 'web',
         mode: 'development',
         devtool: 'inline-cheap-module-source-map',
-        entry: ['react-hot-loader/patch', './src/index.js'],
+        entry: ['react-hot-loader/patch', './src/index.tsx'],
         output: {
             publicPath: '/',
             filename: 'bundle.js',

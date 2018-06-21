@@ -13,7 +13,7 @@ const wpConfig = () => {
         target: 'web',
         devtool: 'none',
         mode: 'production',
-        entry: ['./src/babelHelpers.js', './src/index.js'],
+        entry: ['./src/babelHelpers.js', './src/index.tsx'],
         output: {
             path: path.resolve('./dist'),
             publicPath: '/',

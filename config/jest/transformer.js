@@ -4,7 +4,7 @@ const config = {
     babelrc: false,
     presets: [
         [
-            'env',
+            '@babel/preset-env',
             {
                 loose: true,
                 debug: true,
@@ -13,17 +13,16 @@ const config = {
                 },
             },
         ],
-        'typescript',
-        'react',
+        '@babel/preset-react',
+        '@babel/preset-typescript',
     ],
     plugins: [
-        'syntax-dynamic-import',
-        'transform-react-jsx-self',
-        'transform-react-jsx-source',
-        'transform-class-properties',
-        'transform-object-rest-spread',
-        'syntax-trailing-function-commas',
-        ['lodash', { id: ['lodash', 'recompose'] }],
+        '@babel/plugin-syntax-dynamic-import',
+        '@babel/plugin-proposal-class-properties',
+        '@babel/plugin-proposal-object-rest-spread',
+        '@babel/plugin-transform-react-jsx-self',
+        '@babel/plugin-transform-react-jsx-source',
+        ['babel-plugin-lodash', { id: ['lodash', 'recompose'] }],
     ],
 };
 

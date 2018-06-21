@@ -5,7 +5,7 @@ module.exports = {
     cacheDirectory: '.tmp',
     presets: [
         [
-            'env',
+            '@babel/preset-env',
             {
                 loose: true,
                 debug: true,
@@ -14,23 +14,25 @@ module.exports = {
                 },
             },
         ],
-        'react',
-        'typescript',
+        '@babel/preset-react',
+        '@babel/preset-typescript',
     ],
     plugins: [
-        'syntax-dynamic-import',
-        'transform-class-properties',
-        'transform-object-rest-spread',
-        'syntax-trailing-function-commas',
-        ['lodash', { id: ['lodash', 'recompose'] }],
+        '@babel/plugin-syntax-dynamic-import',
+        '@babel/plugin-proposal-class-properties',
+        '@babel/plugin-proposal-object-rest-spread',
+        ['babel-plugin-lodash', { id: ['lodash', 'recompose'] }],
     ],
     env: {
         production: {
-            plugins: ['transform-react-inline-elements', 'transform-react-constant-elements'],
+            plugins: [
+                '@babel/plugin-transform-react-inline-elements',
+                '@babel/plugin-transform-react-constant-elements',
+            ],
             ignore: ['__snapshots__', '__tests__', 'node_modules'],
         },
         development: {
-            plugins: ['transform-react-jsx-self', 'transform-react-jsx-source'],
+            plugins: ['@babel/plugin-transform-react-jsx-self', '@babel/plugin-transform-react-jsx-source'],
             ignore: ['__snapshots__', '__tests__', 'node_modules'],
         },
     },
