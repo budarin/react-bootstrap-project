@@ -10,7 +10,6 @@
     "css.validate": false,
     "less.validate": false,
     "scss.validate": false,
-    "window.zoomLevel": 0,
     "git.autofetch": true,
 
     // npm sripts
