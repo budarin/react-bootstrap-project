@@ -77,7 +77,12 @@ const wpConfig = () => {
             occurrenceOrder: true,
             minimizer: [new MinifyPlugin(), new OptimizeJsPlugin({ sourceMap: false })],
         },
-        plugins: [new CopyWebpackPlugin([{ from: './src/index.html' }])],
+        plugins: [
+            new CopyWebpackPlugin([{ from: './src/index.html' }]),
+            new webpack.DefinePlugin({
+                __DEV__: false,
+            }),
+        ],
     };
 };
 
