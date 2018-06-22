@@ -1,4 +1,5 @@
 import path from 'path';
+import webpack from 'webpack';
 import OptimizeJsPlugin from 'optimize-js-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import MinifyPlugin from 'babel-minify-webpack-plugin';
@@ -23,11 +24,12 @@ const wpConfig = () => {
             rules: [
                 {
                     test: /\.(ts|tsx|js|jsx)$/,
+                    include: path.resolve('./src'),
+                    exclude: path.resolve('node_modules'),
                     use: {
                         loader: 'babel-loader',
                         options: babelConfig,
                     },
-                    exclude: path.resolve('node_modules'),
                 },
                 {
                     test: /\.(svg|png|jpg|gif)$/,

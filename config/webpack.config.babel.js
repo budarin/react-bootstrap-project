@@ -21,11 +21,12 @@ const wpConfig = () => {
             rules: [
                 {
                     test: /\.(ts|tsx|js|jsx)$/,
+                    include: path.resolve('./src'),
+                    exclude: path.resolve('node_modules'),
                     use: {
                         loader: 'babel-loader',
                         options: babelConfig,
                     },
-                    exclude: path.resolve('node_modules'),
                 },
                 {
                     test: /\.(svg|png|jpg|gif)$/,
