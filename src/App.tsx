@@ -10,12 +10,11 @@ function App() {
 }
 
 function a(b: string): string {
+    // tslint:disable-next-line
     console.log('b = ', b);
 
     return b;
 }
-
-console.log('__DEV__', __DEV__);
 
 if (__DEV__) {
     a('Hello');
