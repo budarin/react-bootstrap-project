@@ -3,13 +3,13 @@
     "version": "1.0.0",
     "description": "React simple bootstrap",
     "scripts": {
-        "start": "webpack-dev-server --mode development --config ./config/webpack.config.babel.js",
-        "type-check": "npx tsc -noEmit",
-        "test-watch": "jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify",
-        "test": "jest --detectOpenHandles --no-cache --forceExit",
+        "start": "prun start",
+        "type-check": "prun type-check ",
+        "test-watch": "prun test-watch",
+        "test": "prun test",
         "coverage": "jest --coverage",
-        "build": "rimraf ./.tmp && rimraf ./dist && prun type-check && set NODE_ENV=production && webpack --mode production --config ./config/webpack.config.prod.babel.js",
-        "upgrade": "ncu --upgradeAll && npm install",
+        "build": "prun build",
+        "upgrade": "prun upgrade",
         "precommit": "lint-staged"
     },
     "lint-staged": {
@@ -66,6 +66,7 @@
         "postcss-loader": "^2.1.5",
         "postcss-preset-env": "^5.1.0",
         "prettier": "^1.13.5",
+        "prun": "^1.0.1",
         "puppeteer": "^1.5.0",
         "react-hot-loader": "^4.3.3",
         "react-test-renderer": "^16.4.1",
