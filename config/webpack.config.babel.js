@@ -70,7 +70,7 @@ const wpConfig = () => {
         plugins: [
             new webpack.HotModuleReplacementPlugin(),
             new CopyWebpackPlugin([{ from: './src/index.html' }]),
-            new webpack.WatchIgnorePlugin([/css\.d\.ts$/]),
+            new webpack.WatchIgnorePlugin([/css\.d\.ts$/]), // due to slow building ignore changes
         ],
         devServer: {
             hot: true,
