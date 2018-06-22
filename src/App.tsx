@@ -1,11 +1,11 @@
 import React from 'react';
-// import app from './app.css';
+import app from './app.css';
 
 function App() {
-    // const css = app.locals;
+    const css = app.locals;
 
-    // app.use();
-    return <p className={'hello'}>Hello World!</p>;
+    app.use();
+    return <p className={css.hello}>Hello World!</p>;
 }
 
 function a(b: string): string {

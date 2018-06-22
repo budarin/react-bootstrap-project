@@ -67,7 +67,11 @@ const wpConfig = () => {
             extensions: ['.ts', '.tsx', '.js', 'jsx', '.json'],
             modules: ['node_modules', path.resolve('./src')],
         },
-        plugins: [new webpack.HotModuleReplacementPlugin(), new CopyWebpackPlugin([{ from: './src/index.html' }])],
+        plugins: [
+            new webpack.HotModuleReplacementPlugin(),
+            new CopyWebpackPlugin([{ from: './src/index.html' }]),
+            new webpack.WatchIgnorePlugin([/css\.d\.ts$/]),
+        ],
         devServer: {
             hot: true,
             port: 4430,
