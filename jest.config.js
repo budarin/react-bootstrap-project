@@ -4,7 +4,7 @@ const config = {
     cacheDirectory: '../.tmp/jest',
     coverageDirectory: '../.tmp/jest/coverage',
     transform: {
-        '^.+\\.(t|j)s$': '../config/jest/transformer.js',
+        '^.+\\.(js|ts|jsx|tsx)$': '../config/jest/transformer.js',
     },
     testMatch: [
         '**/__tests__/**/*.js?(x)',
