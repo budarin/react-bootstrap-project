@@ -2,6 +2,7 @@ const browserList = require('../browserList');
 
 const config = {
     babelrc: false,
+    cacheDirectory: '.tmp/jest',
     presets: [
         [
             '@babel/preset-env',
