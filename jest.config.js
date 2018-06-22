@@ -4,7 +4,7 @@ const config = {
     cacheDirectory: '../.tmp/jest',
     coverageDirectory: '../.tmp/jest/coverage',
     transform: {
-        '^.+\\.js$': '../config/jest/transformer.js',
+        '^.+\\.(t|j)s$': '../config/jest/transformer.js',
     },
     testMatch: [
         '**/__tests__/**/*.js?(x)',
@@ -19,7 +19,9 @@ const config = {
         '\\.(css)$': '../config/jest/mocks/styleMock.js',
     },
     testPathIgnorePatterns: ['/node_modules/'],
-    globals: {},
+    globals: {
+        __DEV__: true,
+    },
     notify: false,
     notifyMode: 'failure',
 };

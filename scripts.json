@@ -12,11 +12,15 @@
     },
     {
         "name": "test-watch",
-        "command": "jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify"
+        "command": "jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify",
+        "NODE_ENV": "test",
+        "__DEV__": true
     },
     {
         "name": "test",
-        "command": "jest --detectOpenHandles --no-cache --forceExit"
+        "command": "jest --detectOpenHandles --no-cache --forceExit",
+        "NODE_ENV": "test",
+        "__DEV__": true
     },
     {
         "name": "clean",

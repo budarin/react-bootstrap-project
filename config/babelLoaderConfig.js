@@ -36,5 +36,8 @@ module.exports = {
             plugins: ['@babel/plugin-transform-react-jsx-self', '@babel/plugin-transform-react-jsx-source'],
             ignore: ['__snapshots__', '__tests__', 'node_modules'],
         },
+        test: {
+            plugins: ['@babel/plugin-transform-react-jsx-self', '@babel/plugin-transform-react-jsx-source'],
+        },
     },
 };
