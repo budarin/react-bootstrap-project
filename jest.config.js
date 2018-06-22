@@ -22,8 +22,6 @@ const config = {
     globals: {
         __DEV__: true,
     },
-    notify: false,
-    notifyMode: 'failure',
 };
 
 module.exports = config;

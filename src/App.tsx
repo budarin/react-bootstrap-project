@@ -16,7 +16,7 @@ function a(b: string): string {
 }
 
 if (__DEV__) {
-    a('Hello');
+    a('Hello !');
 }
 
 export default App;
