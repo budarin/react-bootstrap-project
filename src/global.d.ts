@@ -7,6 +7,10 @@ export interface CssModule {
     };
 }
 
-declare module '*.css' {
-    export interface CssModule {}
+declare module '*.css' implemets CssModule {
+    export const use: Function;
+    export const unuse: Function;
+    export const locals: {
+        [name: string]: string;
+    };
 }
