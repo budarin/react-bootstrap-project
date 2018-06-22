@@ -2,6 +2,7 @@ const browserList = require('../browserList');
 const config = require('../babelLoaderConfig');
 
 config.cacheDirectory = '.tmp/jest';
+// modify env preset modules type to commonjs for jest
 config.presets[0] = [
     '@babel/preset-env',
     {
