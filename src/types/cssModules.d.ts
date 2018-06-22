@@ -1,4 +1,7 @@
-// декларируем любой .css модуль который будет возвращать any
+/* 
+* декларируем .css модуль
+*/
+
 interface ClassHash {
     [name: string]: string;
 }
