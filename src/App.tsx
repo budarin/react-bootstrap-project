@@ -10,8 +10,7 @@ function App() {
 }
 
 function a(b: string): string {
-    // tslint:disable-next-line
-    console.log('b = ', b);
+    console.log('b = ', b); // tslint:disable-line
 
     return b;
 }
