@@ -1,15 +1,24 @@
 // декларируем любой .css модуль который будет возвращать any
+interface ClassHash {
+    [name: string]: string;
+}
+
+interface CssModule {
+    use: Function;
+    unuse: Function;
+    ref: Function;
+    unref: Function;
+    locals: ClassHash;
+}
+
+interface Stringifyable {
+    toString(): string;
+}
+interface SelectorNode {
+    [key: string]: string;
+}
+
 declare module '*.css' {
-    export interface CssModule {
-        use: Function;
-        unuse: Function;
-        locals: {
-            [name: string]: string;
-        };
-    }
-    export const use: Function;
-    export const unuse: Function;
-    export const locals: {
-        [name: string]: string;
-    };
+    const styles: SelectorNode & Stringifyable & CssModule;
+    export default styles;
 }
