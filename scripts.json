@@ -12,8 +12,7 @@
     },
     {
         "name": "test-watch",
-        "command":
-            "jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify --notifyMode=failure",
+        "command": "jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify",
         "NODE_ENV": "test",
         "__DEV__": true
     },
