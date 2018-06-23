@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer';
+// import './App';
 
 describe('Home', () => {
     const width = 1024;
