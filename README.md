@@ -6,12 +6,12 @@ Technology stack:
 
 -   react
 -   babel 7
--   webpack dev server
+-   webpack 4
 -   HMR
 -   prettier
 -   typescript
 -   tslint
--   stylelint (postcss-preset-env, cssnano)
+-   stylelint
 -   jest
 -   puppeteer
 
