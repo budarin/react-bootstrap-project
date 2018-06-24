@@ -27,6 +27,7 @@ module.exports = {
     env: {
         production: {
             plugins: [
+                'babel-plugin-external-helpers',
                 '@babel/plugin-transform-react-inline-elements',
                 '@babel/plugin-transform-react-constant-elements',
             ],
