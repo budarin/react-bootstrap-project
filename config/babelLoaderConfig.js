@@ -2,7 +2,7 @@ const browserList = require('./browserList');
 
 module.exports = {
     babelrc: false,
-    cacheDirectory: '.tmp/babel',
+    cacheDirectory: '.tmp/babel-loader',
     presets: [
         [
             '@babel/preset-env',
