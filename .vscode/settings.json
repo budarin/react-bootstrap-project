@@ -16,5 +16,6 @@
     "npm.enableScriptExplorer": true,
 
     // git
-    "git.autofetch": true
+    "git.autofetch": true,
+    "eslint.enable": false,
 }
