@@ -11,7 +11,7 @@ const wpConfig = () => {
         target: 'web',
         mode: 'development',
         devtool: 'inline-cheap-module-source-map',
-        entry: ['react-hot-loader/patch', './src/index.tsx'],
+        entry: ['./src/index.tsx'],
         output: {
             publicPath: '/',
             filename: 'bundle.js',
@@ -69,18 +69,17 @@ const wpConfig = () => {
             modules: ['node_modules', path.resolve('./src')],
         },
         plugins: [
-            new webpack.HotModuleReplacementPlugin(),
             new CopyWebpackPlugin([{ from: './src/index.html' }]),
             new webpack.WatchIgnorePlugin([/css\.d\.ts$/]), // due to slow building ignore changes
             new webpack.DefinePlugin({
                 __DEV__: true,
             }),
         ],
-        devServer: {
+        serve: {
             hot: true,
             port: 4430,
+            http2: true,
             https: {
-                ca: fs.readFileSync('certs/cacert.crt'),
                 key: fs.readFileSync('certs/server.key'),
                 cert: fs.readFileSync('certs/server.crt'),
             },

@@ -2,7 +2,7 @@ const browserList = require('./browserList');
 
 module.exports = {
     babelrc: false,
-    cacheDirectory: '.tmp/babel',
+    cacheDirectory: '.tmp/babel-loader',
     presets: [
         [
             '@babel/preset-env',
@@ -27,6 +27,7 @@ module.exports = {
     env: {
         production: {
             plugins: [
+                'babel-plugin-external-helpers',
                 '@babel/plugin-transform-react-inline-elements',
                 '@babel/plugin-transform-react-constant-elements',
             ],

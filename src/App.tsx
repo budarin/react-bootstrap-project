@@ -1,4 +1,6 @@
 import React from 'react';
+import { hot } from 'react-hot-loader';
+
 import app from './app.css';
 
 function App() {
@@ -16,7 +18,7 @@ function a(b: string): string {
 }
 
 if (__DEV__) {
-    a('Hello !');
+    a('Hello!');
 }
 
-export default App;
+export default hot(module)(App);
