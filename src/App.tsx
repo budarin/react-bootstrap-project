@@ -21,4 +21,4 @@ if (__DEV__) {
     a('Hello!');
 }
 
-export default hot(module)(App);
+export default (__DEV__ ? hot(module)(App) : App);
