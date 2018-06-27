@@ -1,14 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 import { hot } from 'react-hot-loader';
 
 import app from './app.css';
 
-function App() {
-    const css = app.locals;
-
-    app.use();
-
-    return <p className={css.hello}>Hello World!</p>;
+class App extends React.Component {
+    render() {
+        const css = app.locals;
+        app.use();
+        return <p className={css.hello}>Hello World!</p>;
+    }
 }
 
 function a(b: string): string {
