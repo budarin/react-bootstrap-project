@@ -76,7 +76,6 @@ const wpConfig = () => {
             }),
         ],
         serve: {
-            hot: true,
             port: 4430,
             http2: true,
             https: {
