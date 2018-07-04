@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { hot } from 'react-hot-loader';
 
 import app from './app.css';
 
@@ -21,4 +20,4 @@ if (__DEV__) {
     a('Hello!');
 }
 
-export default (__DEV__ ? hot(module)(App) : App);
+export default App;
