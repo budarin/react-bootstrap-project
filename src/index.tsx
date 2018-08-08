@@ -14,10 +14,9 @@ function renderApp() {
 renderApp();
 
 if (__DEV__) {
-    require('webpack-serve-overlay');
+    require('webpack-serve-overlay'); // tslint:disable-line
 
     if (module.hot) {
-        // $FlowIgnore
         module.hot.accept('./App', () => {
             renderApp();
         });
