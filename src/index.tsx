@@ -14,6 +14,8 @@ function renderApp() {
 renderApp();
 
 if (__DEV__) {
+    require('webpack-serve-overlay');
+
     if (module.hot) {
         // $FlowIgnore
         module.hot.accept('./App', () => {
