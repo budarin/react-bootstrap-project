@@ -71,8 +71,8 @@ const wpConfig = () => {
         },
         plugins: [
             new HardSourceWebpackPlugin({
-                cacheDirectory: path.resolve('../node_modules/.cache/hard-source/[confighash]'),
-                recordsPath: path.resolve('../node_modules/.cache/hard-source/[confighash]/records.json'),
+                cacheDirectory: path.resolve('./node_modules/.cache/hard-source/[confighash]'),
+                recordsPath: path.resolve('./node_modules/.cache/hard-source/[confighash]/records.json'),
                 configHash: require('node-object-hash')().hash,
             }),
             new CopyWebpackPlugin([{ from: './src/index.html' }]),
