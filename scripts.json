@@ -12,8 +12,7 @@
     },
     {
         "name": "test-watch",
-        "command":
-            "jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify --notifyMode=failure",
+        "command": "jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify --notifyMode=failure",
         "NODE_ENV": "test",
         "__DEV__": true
     },
@@ -29,8 +28,7 @@
     },
     {
         "name": "build",
-        "command":
-            "prun clean && prun type-check && webpack --mode production --config ./config/webpack.config.prod.babel.js",
+        "command": "prun clean && webpack --mode production --config ./config/webpack.config.prod.babel.js",
         "env": {
             "NODE_ENV": "production"
         }
