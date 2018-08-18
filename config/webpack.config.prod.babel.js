@@ -7,15 +7,13 @@ import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 
 import babelConfig from './babelLoaderConfig';
 
-babelConfig.plugins.push('external-helpers');
-
 const wpConfig = () => {
     return {
         cache: false,
         target: 'web',
         devtool: 'none',
         mode: 'production',
-        entry: ['./src/babelHelpers.js', './src/index.tsx'],
+        entry: ['./src/index.tsx'],
         output: {
             path: path.resolve('./dist'),
             publicPath: '/',
