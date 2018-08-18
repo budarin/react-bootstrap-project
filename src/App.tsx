@@ -8,7 +8,7 @@ class App extends React.Component {
 
         app.use();
 
-        return <p className={css.hello}>Hello World!</p>;
+        return <p className={css.hello}>Hello World !</p>;
     }
 }
 
