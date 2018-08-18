@@ -70,7 +70,11 @@ const wpConfig = () => {
             modules: ['node_modules', path.resolve('./src')],
         },
         plugins: [
-            new HardSourceWebpackPlugin(), // should be first for hmr
+            new HardSourceWebpackPlugin({
+                cacheDirectory: path.join(__dirname, '../node_modules/.cache/hard-source/[confighash]'),
+                recordsPath: path.join(__dirname, '../node_modules/.cache/hard-source/[confighash]/records.json'),
+                configHash: require('node-object-hash')().hash,
+            }), // should be first for hmr
             new CopyWebpackPlugin([{ from: './src/index.html' }]),
             new webpack.WatchIgnorePlugin([/css\.d\.ts$/]), // due to slow building ignore changes
             new webpack.DefinePlugin({
