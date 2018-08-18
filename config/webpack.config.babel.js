@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import webpack from 'webpack';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 
 import babelConfig from './babelLoaderConfig';
 
@@ -74,6 +75,7 @@ const wpConfig = () => {
             new webpack.DefinePlugin({
                 __DEV__: true,
             }),
+            new HardSourceWebpackPlugin(),
         ],
         serve: {
             port: 4430,
