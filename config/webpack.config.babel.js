@@ -70,12 +70,12 @@ const wpConfig = () => {
             modules: ['node_modules', path.resolve('./src')],
         },
         plugins: [
+            new HardSourceWebpackPlugin(),
             new CopyWebpackPlugin([{ from: './src/index.html' }]),
             new webpack.WatchIgnorePlugin([/css\.d\.ts$/]), // due to slow building ignore changes
             new webpack.DefinePlugin({
                 __DEV__: true,
             }),
-            new HardSourceWebpackPlugin(),
         ],
         serve: {
             port: 4430,
