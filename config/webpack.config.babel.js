@@ -70,7 +70,7 @@ const wpConfig = () => {
             modules: ['node_modules', path.resolve('./src')],
         },
         plugins: [
-            new HardSourceWebpackPlugin(),
+            new HardSourceWebpackPlugin(), // should be first for hmr
             new CopyWebpackPlugin([{ from: './src/index.html' }]),
             new webpack.WatchIgnorePlugin([/css\.d\.ts$/]), // due to slow building ignore changes
             new webpack.DefinePlugin({
