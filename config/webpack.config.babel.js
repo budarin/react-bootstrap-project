@@ -85,6 +85,7 @@ const wpConfig = () => {
             port: 4430,
             http2: true,
             https: {
+                ca: fs.readFileSync('certs/cacert.crt'),
                 key: fs.readFileSync('certs/server.key'),
                 cert: fs.readFileSync('certs/server.crt'),
             },
