@@ -21,6 +21,12 @@
     // git
     "git.autofetch": true,
 
-    "eslint.enable": false,
-    "files.autoSave": "onFocusChange"
+    "workbench.iconTheme": "vs-nomo-dark",
+    "window.zoomLevel": 1,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Plastic",
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.sideBar.location": "left",
+    "git.confirmSync": false,
+    "eslint.enable": false
 }
