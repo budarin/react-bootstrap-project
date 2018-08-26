@@ -70,7 +70,7 @@ const wpConfig = () => {
             ],
         },
         resolve: {
-            extensions: ['.ts', '.tsx', '.js', 'jsx', '.json', '.css'],
+            extensions: ['.ts', '.tsx', '.js', 'jsx', '.json'],
             modules: ['node_modules', path.resolve('./src')],
         },
         plugins: [
