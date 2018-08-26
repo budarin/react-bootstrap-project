@@ -61,13 +61,16 @@ const wpConfig = () => {
                         },
                         {
                             loader: 'postcss-loader',
+                            options: {
+                                include: [/node_modules/],
+                            },
                         },
                     ],
                 },
             ],
         },
         resolve: {
-            extensions: ['.ts', '.tsx', '.js', 'jsx', '.json'],
+            extensions: ['.ts', '.tsx', '.js', 'jsx', '.json', '.css'],
             modules: ['node_modules', path.resolve('./src')],
         },
         plugins: [
