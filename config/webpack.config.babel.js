@@ -55,11 +55,15 @@ const wpConfig = () => {
                             options: {
                                 modules: true,
                                 sourceMap: false,
+                                importLoaders: 1,
                                 localIdentName: '[name].[local]_[hash:7]',
                             },
                         },
                         {
                             loader: 'postcss-loader',
+                            options: {
+                                include: [/node_modules/],
+                            },
                         },
                     ],
                 },
