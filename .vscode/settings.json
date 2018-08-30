@@ -23,6 +23,8 @@
 
     "workbench.iconTheme": "vs-nomo-dark",
     "editor.minimap.enabled": false,
+    "files.autoSave": "onFocusChange",
+    "files.autoSaveDelay": 1000,
     "workbench.colorTheme": "Plastic",
     "workbench.statusBar.feedback.visible": false,
     "workbench.sideBar.location": "left",
