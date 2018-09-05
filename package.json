@@ -57,7 +57,7 @@
         "babel-plugin-lodash": "^3.3.4",
         "copy-webpack-plugin": "^4.5.2",
         "css-loader": "^1.0.0",
-        "enzyme": "^3.5.0",
+        "enzyme": "^3.6.0",
         "hard-source-webpack-plugin": "^0.12.0",
         "image-size-loader": "^0.7.0",
         "jest": "^23.5.0",
@@ -83,7 +83,7 @@
         "tslint-config-prettier": "^1.15.0",
         "tslint-react": "^3.6.0",
         "typescript": "^3.0.3",
-        "webpack": "^4.17.1",
+        "webpack": "^4.17.2",
         "webpack-cli": "^3.1.0",
         "webpack-serve": "2.0.2",
         "webpack-serve-overlay": "^0.3.0"
