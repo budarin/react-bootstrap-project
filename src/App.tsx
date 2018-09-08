@@ -2,13 +2,20 @@ import * as React from 'react';
 
 import app from './app.css';
 
-class App extends React.Component {
+interface IProps {
+    greet: string;
+}
+
+class App extends React.Component<IProps> {
+    public static defaultProps: IProps = {
+        greet: 'Hi!',
+    };
     public render() {
         const css = app.locals;
 
         app.use();
 
-        return <p className={css.hello}>Hello World!</p>;
+        return <p className={css.hello}>{this.props.greet || 'Hello'} World!</p>;
     }
 }
 
