@@ -83,6 +83,10 @@ const wpConfig = () => {
             new webpack.DefinePlugin({
                 __DEV__: false,
             }),
+            new webpack.SourceMapDevToolPlugin({
+                columns: false,
+                filename: '[name].js.map',
+            }),
         ],
     };
 };
