@@ -35,6 +35,6 @@
     },
     {
         "name": "upgrade",
-        "command": "ncu --upgradeAll && npm install"
+        "command": "npm-upgrade && npm install"
     }
 ]
