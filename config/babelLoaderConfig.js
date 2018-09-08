@@ -13,7 +13,10 @@ module.exports = {
                 useBuiltIns: 'usage',
                 targets: {
                     // в разработке использовать только последние версии а в продакшене - нужные
-                    browsers: process.env.NODE_ENV === 'development' ? ['last 2 Chrome versions'] : browserList,
+                    browsers:
+                        process.env.NODE_ENV === 'development'
+                            ? ['last 2 Chrome versions']
+                            : ['last 1 version'].concat(browserList),
                 },
             },
         ],
