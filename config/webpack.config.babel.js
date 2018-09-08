@@ -10,7 +10,8 @@ const wpConfig = () => {
         cache: true,
         target: 'web',
         mode: 'development',
-        devtool: 'inline-cheap-module-eval-source-map',
+        devtool: 'cheap-module-eval-source-map',
+        // devtool: 'eval',
         entry: ['./src/index.tsx'],
         output: {
             publicPath: '/',
