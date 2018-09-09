@@ -81,7 +81,8 @@ const wpConfig = () => {
         plugins: [
             new CopyWebpackPlugin([{ from: './src/index.html' }]),
             new webpack.DefinePlugin({
-                __DEV__: false,
+                'process.env.__DEV__': false,
+                'process.env.__BROWSER__': true,
             }),
             new webpack.SourceMapDevToolPlugin({
                 columns: false,

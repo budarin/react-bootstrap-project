@@ -7,11 +7,11 @@
         "type-check": "prun type-check ",
         "test-watch": "prun test-watch",
         "test": "prun test",
-        "coverage": "jest --coverage",
         "build": "prun build",
         "upgrade": "prun upgrade",
         "precommit": "lint-staged"
     },
+    "browserslist": "> 3%, not ie < 13, not dead",
     "lint-staged": {
         "*.{js,json,css,md}": [
             "prettier --write",

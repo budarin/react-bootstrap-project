@@ -19,11 +19,15 @@ const config = {
         '\\.(css)$': 'identity-obj-proxy',
     },
     testPathIgnorePatterns: ['/node_modules/'],
-    globals: {
-        __DEV__: true,
-        __BROWSER__: false,
-    },
+
+    collectCoverage: true,
+    coverageDirectory: '../.tmp/coverage',
+    collectCoverageFrom: ['**/*.{ts,tsx}', '!src/**/*.d.ts'],
+
     notify: false,
+    globals: {
+        'process.env.__DEV__': true,
+    },
 };
 
 module.exports = config;

@@ -3,7 +3,7 @@ import * as React from 'react';
 import app from './app.css';
 
 interface IProps {
-    greet: string;
+    greet?: string;
 }
 
 class App extends React.Component<IProps> {
@@ -14,7 +14,7 @@ class App extends React.Component<IProps> {
     public render() {
         const css = app.locals;
 
-        if (__BROWSER__) {
+        if (process.env.__BROWSER__) {
             app.use();
         }
 
@@ -28,7 +28,7 @@ function a(b: string): string {
     return b;
 }
 
-if (__DEV__) {
+if (process.env.__DEV__) {
     a('Hello!');
 }
 
