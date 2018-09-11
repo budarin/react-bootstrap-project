@@ -1,4 +1,5 @@
-const browserList = require('./browserList');
+const packageJson = require('../package');
+const browserslist = packageJson.browserslist;
 
 module.exports = {
     babelrc: false,

@@ -1,4 +1,5 @@
-const browserlist = require('./config/browserList');
+const packageJson = require('./package');
+const browserslist = packageJson.browserslist;
 
 module.exports = {
     extends: ['stylelint-config-recommended', 'stylelint-config-css-modules', 'stylelint-config-prettier'],

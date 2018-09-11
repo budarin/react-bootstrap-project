@@ -30,6 +30,7 @@
     ],
     "author": "Vadim Budarin",
     "license": "ISC",
+    "browserslist": "> 3%, not ie < 13, not dead",
     "devDependencies": {
         "@babel/cli": "^7.0.0",
         "@babel/core": "^7.0.0",
