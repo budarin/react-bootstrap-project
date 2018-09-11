@@ -8,7 +8,7 @@ module.exports = {
         'plugin/no-unsupported-browser-features': [
             true,
             {
-                browsers: browserlist,
+                // browsers: browserlist,
                 severity: 'warning',
             },
         ],

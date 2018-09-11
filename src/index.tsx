@@ -13,7 +13,7 @@ function renderApp() {
 
 renderApp();
 
-if (__DEV__) {
+if (process.env.__DEV__) {
     require('webpack-serve-overlay'); // tslint:disable-line
 
     if (module.hot) {

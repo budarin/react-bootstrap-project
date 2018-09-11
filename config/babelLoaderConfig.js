@@ -14,7 +14,10 @@ module.exports = {
                 useBuiltIns: 'usage',
                 targets: {
                     // в разработке использовать только последние версии а в продакшене - нужные
-                    browsers: process.env.NODE_ENV === 'development' ? ['last 1 version'] : browserList,
+                    browsers:
+                        process.env.NODE_ENV === 'development'
+                            ? ['last 1 Chrome versions']
+                            : 'last 1 version, ' + browserslist, // @babel/preset-env has own list of browsers other than others
                 },
             },
         ],
@@ -24,7 +27,6 @@ module.exports = {
     plugins: [
         '@babel/plugin-syntax-dynamic-import',
         '@babel/plugin-proposal-class-properties',
-        '@babel/plugin-proposal-object-rest-spread',
         ['babel-plugin-lodash', { id: ['lodash', 'recompose'] }],
         '@babel/plugin-transform-runtime',
     ],
@@ -33,6 +35,8 @@ module.exports = {
             plugins: [
                 '@babel/plugin-transform-react-inline-elements',
                 '@babel/plugin-transform-react-constant-elements',
+                'babel-plugin-transform-react-class-to-function',
+                'babel-plugin-closure-elimination',
             ],
             ignore: ['__snapshots__', '__tests__', 'node_modules'],
         },

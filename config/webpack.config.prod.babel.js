@@ -83,9 +83,13 @@ const wpConfig = () => {
         plugins: [
             new CopyWebpackPlugin([{ from: './src/index.html' }]),
             new webpack.DefinePlugin({
-                __DEV__: false,
+                'process.env.__DEV__': false,
+                'process.env.__BROWSER__': true,
             }),
-            new webpack.WatchIgnorePlugin([/css\.d\.ts$/]), // due to slow building ignore changes
+            new webpack.SourceMapDevToolPlugin({
+                columns: false,
+                filename: 'bundle.js.map',
+            }),
         ],
     };
 };

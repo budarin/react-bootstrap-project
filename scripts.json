@@ -13,14 +13,12 @@
     {
         "name": "test-watch",
         "command": "jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify --notifyMode=failure",
-        "NODE_ENV": "test",
-        "__DEV__": true
+        "NODE_ENV": "test"
     },
     {
         "name": "test",
         "command": "jest --detectOpenHandles --no-cache --forceExit",
-        "NODE_ENV": "test",
-        "__DEV__": true
+        "NODE_ENV": "test"
     },
     {
         "name": "clean",
@@ -35,6 +33,6 @@
     },
     {
         "name": "upgrade",
-        "command": "ncu --upgradeAll && npm install"
+        "command": "npm-upgrade && npm install"
     }
 ]

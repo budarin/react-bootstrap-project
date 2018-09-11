@@ -16,13 +16,18 @@ const config = {
     moduleNameMapper: {
         '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
             '../config/jest/mocks/fileMock.js',
-        '\\.(css)$': '../config/jest/mocks/styleMock.js',
+        '\\.(css)$': 'identity-obj-proxy',
     },
     testPathIgnorePatterns: ['/node_modules/'],
-    globals: {
-        __DEV__: true,
-    },
+
+    collectCoverage: true,
+    coverageDirectory: '../.tmp/coverage',
+    collectCoverageFrom: ['**/*.{ts,tsx}', '!src/**/*.d.ts'],
+
     notify: false,
+    globals: {
+        'process.env.__DEV__': true,
+    },
 };
 
 module.exports = config;

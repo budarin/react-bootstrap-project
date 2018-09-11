@@ -10,7 +10,8 @@ const wpConfig = () => {
         cache: true,
         target: 'web',
         mode: 'development',
-        devtool: 'inline-cheap-module-source-map',
+        devtool: 'cheap-module-eval-source-map',
+        // devtool: 'eval',
         entry: ['./src/index.tsx'],
         output: {
             publicPath: '/',
@@ -76,7 +77,8 @@ const wpConfig = () => {
             new CopyWebpackPlugin([{ from: './src/index.html' }]),
             new webpack.WatchIgnorePlugin([/css\.d\.ts$/]), // due to slow building ignore changes
             new webpack.DefinePlugin({
-                __DEV__: true,
+                'process.env.__DEV__': true,
+                'process.env.__BROWSER__': true,
             }),
         ],
         serve: {
