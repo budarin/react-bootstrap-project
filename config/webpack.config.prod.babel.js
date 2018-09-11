@@ -90,6 +90,7 @@ const wpConfig = () => {
                 columns: false,
                 filename: 'bundle.js.map',
             }),
+            new webpack.WatchIgnorePlugin([/css\.d\.ts$/]), // due to slow building ignore changes
         ],
     };
 };

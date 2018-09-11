@@ -4,12 +4,12 @@
     "description": "React simple bootstrap",
     "scripts": {
         "start": "prun start",
-        "type-check": "prun type-check ",
+        "type-check": "prun type-check",
         "test-watch": "prun test-watch",
         "test": "prun test",
         "build": "prun build",
         "upgrade": "prun upgrade",
-        "precommit": "lint-staged"
+        "precommit": "lint-staged && prun type-check"
     },
     "browserslist": "> 3%, not ie < 13, not dead",
     "lint-staged": {
