@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import webpack from 'webpack';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
-import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 
 import babelConfig from './babelLoaderConfig';
 
@@ -51,10 +50,10 @@ const wpConfig = () => {
                             },
                         },
                         {
-                            loader: 'css-loader',
+                            loader: 'typings-for-css-modules-loader',
                             options: {
                                 modules: true,
-                                sourceMap: false,
+                                namedExport: false,
                                 importLoaders: 1,
                                 localIdentName: '[name].[local]_[hash:7]',
                             },
@@ -74,11 +73,6 @@ const wpConfig = () => {
             modules: ['node_modules', path.resolve('./src')],
         },
         plugins: [
-            new HardSourceWebpackPlugin({
-                cacheDirectory: path.resolve('./node_modules/.cache/hard-source/[confighash]'),
-                recordsPath: path.resolve('./node_modules/.cache/hard-source/[confighash]/records.json'),
-                configHash: require('node-object-hash')().hash,
-            }),
             new CopyWebpackPlugin([{ from: './src/index.html' }]),
             new webpack.WatchIgnorePlugin([/css\.d\.ts$/]), // due to slow building ignore changes
             new webpack.DefinePlugin({

@@ -3,7 +3,6 @@ import webpack from 'webpack';
 import OptimizeJsPlugin from 'optimize-js-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import MinifyPlugin from 'babel-minify-webpack-plugin';
-import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 
 import babelConfig from './babelLoaderConfig';
 
@@ -51,12 +50,14 @@ const wpConfig = () => {
                             loader: 'style-loader/useable',
                         },
                         {
-                            loader: 'css-loader',
+                            loader: 'typings-for-css-modules-loader',
                             options: {
                                 modules: true,
+                                namedExport: false,
                                 importLoaders: 1,
                                 localIdentName: '[hash:base64:8]',
                                 sourceMap: false,
+                                // cssnano options
                                 minimize: {
                                     // safe: true,
                                     zindex: false,
@@ -84,7 +85,7 @@ const wpConfig = () => {
             new webpack.DefinePlugin({
                 __DEV__: false,
             }),
-            new HardSourceWebpackPlugin(),
+            new webpack.WatchIgnorePlugin([/css\.d\.ts$/]), // due to slow building ignore changes
         ],
     };
 };
