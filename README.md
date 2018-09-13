@@ -1,6 +1,6 @@
 # react-http2-bootstrap-project
 
-[![dependencies](https://david-dm.org/budarin/ react-http2-bootstrap-project.svg)](https://david-dm.org/budarin/react-http2-bootstrap-project) [![devDependencies](https://david-dm.org/budarin/react-http2-bootstrap-project/dev-status.svg)](https://david-dm.org/budarin/react-http2-bootstrap-project?type=dev)
+[![dependencies](https://david-dm.org/budarin/react-http2-bootstrap-project.svg)](https://david-dm.org/budarin/react-http2-bootstrap-project) [![devDependencies](https://david-dm.org/budarin/react-http2-bootstrap-project/dev-status.svg)](https://david-dm.org/budarin/react-http2-bootstrap-project?type=dev)
 
 Project for fast developing simple react applications and components
 
