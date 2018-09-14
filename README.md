@@ -6,6 +6,7 @@ Project for fast developing simple react applications and components
 
 Technology stack:
 
+-   HTTP2 with pushing
 -   react
 -   babel 7
 -   webpack 4
